@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header> <!-- Cabeçalho -->
+        <h1>Galeria de Fotos</h1> <!-- Titulo Cabeçalho -->
+        <button type="button">Nova Imagem +</button> <!-- Botão do cabeçalho de adicionar imagem -->
+    </header>
+    <form>
+        <h2>Inserir nova imagem</h2>
+        <input type="url" required placeholder="URL da imagem" id="endereco-imagem-nova">
+        <button type="submit">Adicionar</button>
+        <button type="reset" id="botao-cancelar">Cancelar</button>
+    </form>
+    <ul>
+        <li>
+            <img src="img/foto1.jpg" alt="imagem de um gato">
+            <div class="overlay-imagem-link">
+                <a href="img/foto1.jpg" title="Ver imagem em tamanho real" target="_blank" >
+                    Ver imagem em tamanho real
+                </a> <!-- target="_blank" - fazer o link abrir em outra aba -->
+            </div>
+            <li>
+                <img src="img/foto2.jpg" alt="imagem de um gato">
+                <div class="overlay-imagem-link"> 
+                    <a href="img/foto2.jpg" title="Ver imagem em tamanho real" target="_blank">
+                        Ver imagem em tamanho real
+                    </a> <!-- target="_blank" - fazer o link abrir em outra aba -->
+                </div>
+            </li>
+            <li>
+                <img src="img/foto3.jpg" alt="imagem de um gato">
+                <div class="overlay-imagem-link">
+                    <a href="img/foto3.jpg" title="Ver imagem em tamanho real" target="_blank">
+                        Ver imagem em tamanho real
+                    </a> <!-- target="_blank" - fazer o link abrir em outra aba -->
+                </div>
+            </li>
+        </li>
+    </ul>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
+

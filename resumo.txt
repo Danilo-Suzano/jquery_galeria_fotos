@@ -1,0 +1,66 @@
+Para trabalhar com jQuery deve se seguir os seguintes passos: 
+
+1º Acessar o site jquery.com
+2º Download jQuery, depois escolher a primeira opção disponível e clicar 
+3º Copiar o link da aba 
+4º Dentro do html, chamar o elemento <script src=""></script>
+5º Dentro so src do script aplicar o link copiado 
+
+
+Como funciona o jQuery:
+
+Para chamar o jQuery usamos o $
+
+*Estrutura básica inicial do jQuery:
+
+$(document).ready(function(){})
+
+*Comando para ver se o jQuery está funcionando corretamente:
+
+$(document).ready(function(){ 
+    alert('Olá mundo')
+})
+
+
+                                COMANDOS 
+
+O comando querySelector vai chamar o primeiro elemento que ele encontrar relacionado ao que fo indicado a ele (.querySelector):
+
+console.log(document.querySelector('header button')) 
+
+Quando o botão for clicado vai executar o callback (.click):
+
+$('header button').click(function(){ 
+        alert('Expandir formulário')
+})
+
+Remover o comportamento do formulário de atualizar a página (e.preventDefault();):
+
+$('form').on('submit', function(e){ 
+        e.preventDefault();
+    })
+
+
+Criar efeito de expansão quando um botão for clicado(.slideDown):
+
+$('header button').click(function(){ 
+        $('form').slideDown(); 
+    })
+
+Criar efeito de retração quando um botão for clicado(.slideUp):
+
+$('#botao-cancelar').click(function(){
+        $('form').slideUp(); 
+    })
+
+Para recuperar o valro dado no form (.val();):
+
+const enderecoDaNovaImagem = $('#endereco-imagem-nova').val(); 
+
+Adicionar um elemento a constante referida (.appendTo();):
+
+$(`<img src="${enderecoDaNovaImagem}"/>`).appendTo(novoItem);
+
+Causar o efeito de surgir(.fadeIN();):
+
+$(novoItem).fadeIn();

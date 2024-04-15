@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+header{ /* Estilizando a tag header */
+    background-color: #5f27cd; 
+    padding: 16px 0; /* criar um espaçamento no cabeçalho em cima e embaixo e nenhum nas laterais */
+    color: #fff; /* cor do texto do header */
+    display: flex; /* deixar os elementos flexíveis (ficar um ao lado do outro) */
+    border-bottom: 16px solid #341f97; /* criar uma borda de separação abaixo do elemento header */
+    justify-content: center; /* alinhar o conteudo do header */
+    text-transform: uppercase; /* Deixar o texto em letras maiúsculas */
+    font-style: italic; /* Aplicar um tipo de fonte (itálica) */
+}
+
+header button{ /* Estillizando o botão de dentro do header */
+    margin-left: 16px; /* adicionar uma margem na esquerda */
+
+}
+
+form{ /* Estilizando a tag form */
+    background-color: #c8d6e5; 
+    padding: 24px 0; /* criar um espaçamento interno no form em cima e embaixo e nenhum nas laterais */
+    text-align: center; /* Alinhamento de texto (centro) */
+}
+
+form h2 { /* Estilizando o titulo h2 dentro da tag form */
+    margin-bottom: 16px; /* colocando uma margem abaixo do elemento */
+}
+
+input, button{ /* Estilizando tanto o button quanto o input */
+    padding: 8px; /* criar um espaçamento interno entre os botões e o input */
+
+}
+
+button { /* Estilizando somente a tag button */
+    background-color: #009432;
+    border: none; /* retirando a borda do botão */
+    font-weight: bold; /* definindo o volume do texto  */
+    text-transform: uppercase; /* Deixar o texto em letras maiúsculas */
+    color: #fff; /* cor do texto do button */
+    cursor: pointer; /* mudar o efeito do mouse quando passar em cima do botão */
+}
+
+#botao-cancelar { /* Restrigindo a estilização somente para o button que tem essa id (botao-cancelar) */
+    background-color: red;
+}
+
+ul { /* Estilizando a tag ul */
+    display: flex; /* deixar os elementos flexíveis (ficar um ao lado do outro) */
+    flex-wrap: wrap; /* quando os elementos ocuparem toda tela crie-se uma nova linha */
+}
+
+ul li{ /* Estilizando as tags li que estão dentro do ul */
+    max-width: 25%; /* deixar quatro itens em uma linha  */
+    list-style: none; /* remover os estilo da lista (os pingos pretos que aparecem a lado da lista) */
+    position: relative; /* como é o elemento pai da classe .overlay-imagem-link, é usado para não vazar no layout */
+    max-height: 280px; /* limitar a altura do li */
+    overflow-y: hidden; /* todo conteudo que desrespeitar essa regra não será exibido */
+}
+
+ul li img{ /* Estilizando as tag img dentro do li que está dentro do ul */
+    width: 100%; /* para a img ocupar 100% da área requerida acima  */
+}
+
+.overlay-imagem-link { /* Criando um criterio de estilo somente para as tags que possuem essa classe */
+    padding: 16px; /* criar um espaçamento interno de 16px */
+    background-color: rgba(0,0,0,0.7); /* sistema rgba é para criar um sistema e cor com transparência */
+    position: absolute; /* posicionar o elemento no canto inferior do li */
+    bottom: 0; /* para dizer que vai ficar na estremidade */
+    left: 0; /* para dizer que vai ficar na estremidade */
+    width: 100%; /* ter uma largura de 100% */
+    opacity: 0; /* remover a opacidade da barra do link */
+    transition: all ease .8s; /* adicionar uma transição quando o mouse passar em cima da imagem */
+}
+
+.overlay-imagem-link a{ /* Eslilizando o link onde ele se localiza dentro das tags que possuem a classe .overlay-imagem-link */
+    color: #fff; /* cor da letra do link */
+    text-decoration: none ; /* remover o underline */
+}
+
+ul li:hover .overlay-imagem-link{ /* editando o efeito do mouse quando passa por cima da imagem */
+    opacity: 1; /* voltar com opacidade quando o mouse passar por cima da imagem */
+}
+
+
+
+
+
+
+
